@@ -30,7 +30,7 @@ class BeerServiceJPATest {
 
     @Test
     void listBeers() {
-        List<BeerDTO> beerlist = beerService.listBeers();
+        List<BeerDTO> beerlist = beerService.listBeers(null,null,null,null,null).getContent();
         System.out.println("beerlist.size()= "+beerlist.size());
         assertNotEquals(0,beerlist.size());
     }
